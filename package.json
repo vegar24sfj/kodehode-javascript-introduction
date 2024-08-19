@@ -10,5 +10,8 @@
     "typescript": "4.4.4",
     "vitest": "^1.2.0"
   },
-  "keywords": []
+  "keywords": [],
+  "stackblitz": {
+    "startCommand": "npm run test"
+  }
 }
