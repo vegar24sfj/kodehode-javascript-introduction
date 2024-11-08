@@ -15,6 +15,7 @@ Read the terminal output before and after to see the difference
 ******************************************************************************/
 
 export function start() {
+  return true
   //your code here
   // return true
 };
@@ -32,6 +33,7 @@ HINT: Use the modulo operator (%) Google it! 😊
 ******************************************************************************/
 
 export const oddOrEven = () => {
+  
   //your code here
 };
 
@@ -48,6 +50,8 @@ Example: "This is cool" should return "THIS IS COOL!"
 ******************************************************************************/
 
 export function makeMeLoud() {
+  const result = string.toUpperCase()+"!"
+  return result
   //your code here
 }
 
@@ -73,6 +77,13 @@ The function should return:
 ******************************************************************************/
 
 export const greeter = () => {
+  if (hour < 0) {
+    return "Invalid time"
+  } else if (hour >= 0 && hour <= 5 {
+    return "Good night" + " " + fName
+  } else if (hour >= 6 && hour <= 11) {
+    return 'Good morning ${fName}'
+  })
   //your code here
 };
 
@@ -90,7 +101,11 @@ Example 2: ["One", "Two", "Three", "Four", "Five", "Six"] should return
 ["Two", "Three", "Four", "Five"]
 ******************************************************************************/
 
-export function arrayTrimmer() {
+export function arrayTrimmer(arr) {
+  arr.shift() //remove the first index
+  arr.pop() //remove the last index
+  return arr // return the arry with first and last index removed
+
   //your code here
 }
 
@@ -113,7 +128,9 @@ Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
 
-export const cleanAndFun = () => {
+export const cleanAndFun = (string) => {
+  return string.trim().replace("hard", "fun")
+
   //your code here
 };
 
@@ -137,9 +154,18 @@ Use array methods to do the following:
  Return the resulting array.
 ******************************************************************************/
 
-export function marvelEditor() {
+export function marvelEditor(arr) {
+  arr.shift() // removing the first hero
+  arr[2] = "Skrull" // change "Doctor Strange" with "Skrull"
+  arr.splice(0,2, "Captain America")
+  
+  const result = arr.join("💪")
+  return arr
   //your code here
 }
+
+console.log(marvelEditor(heroArray))
+
 
 /******************************************************************************
 7.
@@ -168,7 +194,26 @@ Return "😎Primitive values only😎"
 
 ******************************************************************************/
 
-export function coolMaker() {
+export function coolMaker(input) {
+  if (typeof input === "string") {
+      return "😎"+input+"😎"
+  } else if (typeof input === "number") {
+      return "😎"+(input*2).toString() +"😎"
+  } else if (typeof input === "boolean") {
+      return input ? "😎Yeah😎" : "😎Chill😎"
+  } else {
+    return "😎Primitive values only😎"
+
+        } else {
+        
+
+        }
+      }
+    
+    console.log(coolMaker(undefined))
+
+
+  }
   //your code here
 }
 
